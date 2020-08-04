@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import { Route, Link, Redirect } from "react-router-dom";
 
@@ -33,7 +33,9 @@ class App extends Component {
         </div>
       )}
       componentDidMount() {
-        fetch(hostURL, getAll, deleteOne, getOne, put, post)
+        fetch(hostURL
+          // , getAll, deleteOne, getOne, put, post
+          )
           .then((res) => res.json())
           .then((res) => {
             console.log(res);
