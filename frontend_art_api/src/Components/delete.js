@@ -34,3 +34,4 @@ const deleteOne = {
      
         } //componentWillMount
   }
+export default Delete

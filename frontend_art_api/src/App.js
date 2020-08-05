@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Route, Link, Redirect } from "react-router-dom";
 
+
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
 
 const getAll = {
@@ -58,11 +59,10 @@ class App extends Component {
           </Link>
         </nav>
         <main>
-          <div>
-
-          </div>
+          <Route path="/delete" />
+          <Route path="./Components/delete"/>
         </main>
-      </div>
+      </div> //main div
     ); //return
   } //render
 
