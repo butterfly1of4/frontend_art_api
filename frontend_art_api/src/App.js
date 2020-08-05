@@ -11,12 +11,12 @@ const getAll = {
   },
 };
 
-// const getOne = {
-// 	method: "GET",
-// 	headers: {
-// 		"Content-Type": "application/json",
-// 	},
-// };
+const getOne = {
+	method: "GET",
+	headers: {
+		"Content-Type": "application/json",
+	},
+};
 const put = {
   method: "PUT",
   headers: {
@@ -58,7 +58,9 @@ class App extends Component {
           </Link>
         </nav>
         <main>
-          <div></div>
+          <div>
+
+          </div>
         </main>
       </div>
     ); //return
@@ -66,8 +68,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      hostURL
-      // , getAll, deleteOne, getOne, put, post
+      hostURL, getAll, deleteOne, getOne, put, post
     )
       .then((res) => res.json())
       .then((res) => {
