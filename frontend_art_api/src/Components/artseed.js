@@ -16,10 +16,27 @@ const getAll = {
       constructor(){
           super()
           this.state = {
-
+            title: String,
+            classification: String,
+            url: String,
+            century: String,
+            culture: String,
+            medium: String,
           }
       }//constructor
+      componentWillMount() {
+        fetch(
+          hostURL, getAll
+        ).then((res) => {
+            res.json()
+        }).then((entry) => this.setState({entry}))
+        .catch((err) => {
+            console.log(err)
+        })
+     
+        } //componentWillMount
       render(){
           return(<div></div>)
       }//render
   }//component
+  export default ArtSeed
