@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Route, Link, Redirect } from "react-router-dom";
+import Delete from "./Components/delete";
 
 
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
@@ -18,7 +19,7 @@ const getOne = {
 		"Content-Type": "application/json",
 	},
 };
-const put = {
+const PUT = {
   method: "PUT",
   headers: {
     "Content-Type": "application/json",
@@ -59,8 +60,9 @@ class App extends Component {
           </Link>
         </nav>
         <main>
-          <Route path="/delete" />
-          <Route path="./Components/delete"/>
+          <Route path="/getAll" exact  component={getAll} />
+          <Route path="/Delete" exact component={Delete} />
+          <Route path="/PUTUpdate" exact component={PUTUpdate} />
         </main>
       </div> //main div
     ); //return
