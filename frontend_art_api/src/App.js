@@ -67,26 +67,34 @@ class App extends Component {
   } //render
 
   componentDidMount() {
-    fetch(
-      hostURL, getAll, deleteOne, getOne, put, post
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
+    
 
-        let entry = res;
-        console.log(entry);
-        this.setState({
-          entry: res,
-        });
-        console.log(entry);
-        console.log(this.state.entry);
-        return this.state.entry;
-      });
-  }
-  componentDidUpdate() {
-    console.log("the end");
-    console.log(this.state.entry);
+
+
+
+
+
+
+    //   fetch(
+  //     hostURL, getAll, deleteOne, getOne, put, post
+  //   )
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       console.log(res);
+
+  //       let entry = res;
+  //       console.log(entry);
+  //       this.setState({
+  //         entry: res,
+  //       });
+  //       console.log(entry);
+  //       console.log(this.state.entry);
+  //       return this.state.entry;
+  //     });
+  // }
+  // componentDidUpdate() {
+  //   console.log("the end");
+  //   console.log(this.state.entry);
   }
 }
 export default App;
