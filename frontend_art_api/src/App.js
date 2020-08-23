@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Route, Link, Redirect } from "react-router-dom";
-import Delete from "./Components/delete";
-
+import { Route, Link, Redirect, Switch } from "react-router-dom";
+import Delete from "./Components/Delete";
+import PUTUpdate from "./Components/PUTUpdate"
+import Home from "../src/Home"
 
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
 
@@ -60,9 +61,12 @@ class App extends Component {
           </Link>
         </nav>
         <main>
+          <Switch>
+            <Home />
           <Route path="/getAll" exact  component={getAll} />
           <Route path="/Delete" exact component={Delete} />
           <Route path="/PUTUpdate" exact component={PUTUpdate} />
+          </Switch>
         </main>
       </div> //main div
     ); //return

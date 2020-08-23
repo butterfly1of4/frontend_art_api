@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./App.css";
+import "../App.css";
 import { Route, Link, Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
 
@@ -21,7 +21,7 @@ class PUTUpdate extends Component {
   componentWillMount() {
     fetch(hostURL, getOne)
       .then((res) => res.json())
-      .then((picture) => thi.setState({ picture }))
+      .then((picture) => this.setState({ picture }))
       .then(console.logt(this.state.picture))
       .catch((err) => {
         console.log(err);
@@ -42,13 +42,13 @@ class PUTUpdate extends Component {
           return null;
       }
     });
-return <div>{pics}</div>
+return <div>{}</div>
   }
   update = (e) => {
       e.preventDefault()
       console.dir(e.target[0].value)
       console.log(this.props.match.params.title)
-      console.log(url + this.props.match.params.title)
+      console.log(hostURL + this.props.match.params.title)
       const inputData = {
           title: document.querySelector("input").value
       }
@@ -59,7 +59,7 @@ return <div>{pics}</div>
         },
         body: JSON.stringify(inputData)
       }
-      fetch(url + this.props.match.params.title, PUT)
+      fetch(hostURL + this.props.match.params.title, PUT)
       .then((res) => res.json())
       .then((picture) =>console.log(picture))
       .catch((err) => {
