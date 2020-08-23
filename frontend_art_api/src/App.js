@@ -7,14 +7,14 @@ import Home from "../src/Home"
 
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
 
-const getAll = {
+const GetAll = {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
   },
 };
 
-const getOne = {
+const GetOne = {
 	method: "GET",
 	headers: {
 		"Content-Type": "application/json",
@@ -63,7 +63,7 @@ class App extends Component {
         <main>
           <Switch>
             <Home />
-          <Route path="/getAll" exact  component={getAll} />
+          <Route path="/GetAll" exact  component={GetAll} />
           <Route path="/Delete" exact component={Delete} />
           <Route path="/PUTUpdate" exact component={PUTUpdate} />
           </Switch>
@@ -73,34 +73,29 @@ class App extends Component {
   } //render
 
   componentDidMount() {
-    
 
 
-
-
-
-
-
-    //   fetch(
-  //     hostURL, getAll, deleteOne, getOne, put, post
-  //   )
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res);
-
-  //       let entry = res;
-  //       console.log(entry);
-  //       this.setState({
-  //         entry: res,
-  //       });
-  //       console.log(entry);
-  //       console.log(this.state.entry);
-  //       return this.state.entry;
-  //     });
-  // }
+      fetch(
+      hostURL
+      // , GetAll, deleteOne, GetOne, PUT, post
+    )
+      .then((res) => res.json())
+      .then((readJson) => {
+        console.log(readJson);
+        // let entry = res;
+        // console.log(entry);
+        this.setState({
+          entry: readJson.title
+        });
+        // console.log(entry);
+        // console.log(this.state.entry);
+        // return this.state.entry;
+      });
+      
+  }
   // componentDidUpdate() {
   //   console.log("the end");
   //   console.log(this.state.entry);
-  }
+  // }
 }
 export default App;

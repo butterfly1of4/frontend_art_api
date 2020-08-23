@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
 
-const getOne = {
+const GetAll = {
 	method: "GET",
 	headers: {
 		"Content-Type": "application/json",
@@ -16,29 +16,43 @@ class GetAll extends Component{
     constructor() {
         super()
         this.state={
-            picture: []
+            entry: []
         }
     }
     componentWillMount(){
         fetch(hostURL, GetAll)
         .then((res) => res.json())
-        .then((picture) => this.setState({picture}))
+        .then((entry) => this.setState({entry:list}))
         .catch((err) => {
             console.log(err)
         })
+    console.log(entry, list)
     }
     render() {
-        let list = this.state.picture.map((item) => {
+        console.log(entry)
+        let list = this.state.entry.map((item) => {
             return (
-                <div className='container' key={item}>
-                    <img src= {item.image} />
+                <div>
+                    <div className='entry' key={item}>
+                        {item.entry}
+                        consle.log(item.entry)
+                    <div className="button">
+                        <button onClick={(e) => {this.setState(list= item.entry)}}>
+                            <img src= {item.entry} />
+                            <Link to={''} />
+                        </button>
+                    </div>
+                  
+                    
+                    </div>
                 </div>
-            )
-        })
+            
+        )})
+        console.log(list)
         return (
-            <React.Fragment>
+            // <React.Fragment>
                 <div className="list">{list}</div>
-            </React.Fragment>
+            // </React.Fragment>
         )
     } 
 }
