@@ -22,7 +22,8 @@ class GetAll extends Component{
     componentWillMount(){
         fetch(hostURL, GetAll)
         .then((res) => res.json())
-        .then((entry) => this.setState({entry:list}))
+        .then((entry) => this.setState({entry}),
+        console.log(entry, list))
         .catch((err) => {
             console.log(err)
         })
@@ -39,7 +40,7 @@ class GetAll extends Component{
                     <div className="button">
                         <button onClick={(e) => {this.setState(list= item.entry)}}>
                             <img src= {item.entry} />
-                            <Link to={''} />
+
                         </button>
                     </div>
                   

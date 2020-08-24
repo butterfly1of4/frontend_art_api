@@ -4,6 +4,7 @@ import { Route, Link, Redirect, Switch } from "react-router-dom";
 import Delete from "./Components/Delete";
 import PUTUpdate from "./Components/PUTUpdate"
 import Home from "../src/Home"
+import ArtSeed from './Components/ArtSeed'
 
 const hostURL = "https://rocky-hamlet-98173.herokuapp.com/record";
 
@@ -75,27 +76,26 @@ class App extends Component {
   componentDidMount() {
 
 
-      fetch(
-      hostURL
-      // , GetAll, deleteOne, GetOne, PUT, post
-    )
-      .then((res) => res.json())
-      .then((readJson) => {
-        console.log(readJson);
-        // let entry = res;
-        // console.log(entry);
-        this.setState({
-          entry: readJson.title
-        });
-        // console.log(entry);
-        // console.log(this.state.entry);
-        // return this.state.entry;
-      });
+  //     fetch(
+  //     hostURL
+  //     // , GetAll, deleteOne, GetOne, PUT, post
+  //   )
+  //     .then((res) => res.json())
+  //     .then((readJson) => {
+  //       console.log(readJson);
+  //       // let entry = res;
+  //       // console.log(entry);
+  //       this.setState({
+  //         entry: readJson.title
+  //       });
+
+  //     });
       
-  }
+  // }
   // componentDidUpdate() {
   //   console.log("the end");
   //   console.log(this.state.entry);
   // }
+}
 }
 export default App;

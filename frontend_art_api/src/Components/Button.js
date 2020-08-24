@@ -6,7 +6,7 @@ import { Button } from 'semantic-ui-react'
 //   To homepage
 // </Button>
 
-const ButtonExampleColored = () => (
+const ButtonColored = () => (
   <div>
     <Button color='red'>Red</Button>
     <Button color='orange'>Orange</Button>
@@ -24,7 +24,9 @@ const ButtonExampleColored = () => (
   </div>
 )
 
-export default ButtonExampleColored
+export default ButtonColored
+
+
 
 
 // <div><button class="ui red button">Red</button><button class="ui orange button">Orange</button><button class="ui yellow button">Yellow</button><button class="ui olive button">Olive</button><button class="ui green button">Green</button><button class="ui teal button">Teal</button><button class="ui blue button">Blue</button><button class="ui violet button">Violet</button><button class="ui purple button">Purple</button><button class="ui pink button">Pink</button><button class="ui brown button">Brown</button><button class="ui grey button">Grey</button><button class="ui black button">Black</button></div>

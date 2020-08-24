@@ -1,15 +1,22 @@
 import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
-import { Button } from "semantic-ui-react";
+import { Button, FormField } from "semantic-ui-react";
 
 class Home extends Component {
   render() {
     return (
-      <Switch>
-        <Link to="/GetAll">
-          <button class="ui red button">All Works</button>
-        </Link>
-      </Switch>
+      <div>
+          {'Welcome to the Haravard Art API '}
+        <Switch>
+          <Link to="/GetAll">
+            <button class="ui red button">All Works</button>
+          </Link>
+        </Switch>
+        <Switch>
+            <Link to="/PUTUpdate">
+            </Link>
+        </Switch>
+      </div>
     );
   }
 }
