@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/butterfly1of4/frontend_art_api#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "semantic-ui-css": "^2.4.1",
